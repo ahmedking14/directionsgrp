@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Optimized Infrastructure Proposal - Directions Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        .header {
+            background: linear-gradient(135deg, #5a67d8, #9f7aea);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 700;
+        }
+        .header p {
+            margin: 8px 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+        .tab-link {
+            padding: 16px 32px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #5a67d8;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            flex: 1;
+            text-align: center;
+            max-width: 200px;
+        }
+        .tab-link:hover {
+            background-color: #e9d8fd;
+            color: #4c51bf;
+        }
+        .tab-link.active {
+            background-color: #5a67d8;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            animation: fadeIn 0.6s ease-out;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+            padding: 32px;
+            margin: 24px 0;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        .card h2, .card h3 {
+            color: #4c51bf;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        .card h3 i {
+            margin-right: 12px;
+            color: #9f7aea;
+        }
+        .metric-box {
+            background: linear-gradient(135deg, #9f7aea, #5a67d8);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            margin: 16px 0;
+            font-size: 1.1em;
+        }
+        .list-check {
+            list-style: none;
+            padding: 0;
+            margin: 16px 0;
+        }
+        .list-check li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 28px;
+        }
+        .list-check li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #5a67d8;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .timeline-item {
+            background-color: #f9fafb;
+            padding: 24px;
+            border-left: 6px solid #5a67d8;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        .timeline-item:hover {
+            background-color: #f0f4f8;
+        }
+        .timeline-item h3 {
+            margin-top: 0;
+            color: #4c51bf;
+        }
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .pricing-card {
+            text-align: center;
+        }
+        .pricing-card h3 {
+            font-size: 1.4em;
+        }
+        .cta-button {
+            background: linear-gradient(135deg, #5a67d8, #9f7aea);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            margin-top: 16px;
+            display: inline-block;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(90,103,216,0.3);
+        }
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        @media (max-width: 768px) {
+            .tabs {
+                flex-wrap: wrap;
+                border-radius: 20px;
+            }
+            .tab-link {
+                flex: none;
+                width: 50%;
+            }
+            .header {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI Optimized Infrastructure Play: Directions Group</h1>
+        <p>Prepared for: Bryce Whittingham</p>
+        <p>Prepared by: Ahmed Baysuyev, AI Architect</p>
+        <p>Date: July 22, 2025</p>
+        <p>Timeline: 5 Weeks</p>
+        <p>Investment: 4.5k CAD (with Voice Agent Add-On for +2k CAD)</p>
+    </div>
+
+    <div class="tabs">
+        <div class="tab-link active" onclick="openTab(event, 'overview')">Overview</div>
+        <div class="tab-link" onclick="openTab(event, 'deliverables')">Deliverables</div>
+        <div class="tab-link" onclick="openTab(event, 'timeline')">Timeline</div>
+        <div class="tab-link" onclick="openTab(event, 'add-ons')">Add-Ons</div>
+        <div class="tab-link" onclick="openTab(event, 'investment')">Investment</div>
+        <div class="tab-link" onclick="openTab(event, 'requirements')">Requirements</div>
+    </div>
+
+    <div id="overview" class="tab-content active">
+        <div class="card">
+            <h2>Project Overview</h2>
+            <p>As an AI Architect specializing in optimized infrastructure, this proposal outlines a comprehensive automation suite tailored for Directions Group. By leveraging cutting-edge AI technologies, we'll streamline your lead management, onboarding processes, cross-service lead optimization, and outbound engagements, transforming manual workflows into scalable, intelligent systems.</p>
+            <p><strong>Strategic Value:</strong> In today's competitive landscape for industries like roofing, solar, and pest control, efficiency is key to growth. This solution empowers your team to focus on high-value activities like closing deals and building relationships, while AI handles the repetitive tasks. Expect enhanced data-driven decisions, reduced operational bottlenecks, and a tech-forward edge that positions Directions Group as an innovative leader.</p>
+            <p><strong>Expected Outcomes:</strong></p>
+            <ul class="list-check">
+                <li>Boost overall lead conversion rates by 25-40% through automated retargeting, re-engagement, and cross-service looping.</li>
+                <li>Achieve operational cost savings equivalent to 1-2 full-time employees by automating follow-ups and onboarding.</li>
+                <li>Improve team productivity and morale with seamless, error-free processes.</li>
+                <li>Scale your business effortlessly, handling 2-3x more leads without proportional increases in staff.</li>
+            </ul>
+            <div class="metric-box">Projected ROI: 300% within 6 months</div>
+            <div class="metric-box">Time Savings: 50+ hours/week across teams</div>
+        </div>
+    </div>
+
+    <div id="deliverables" class="tab-content">
+        <div class="card">
+            <h2>Core Deliverables</h2>
+            <p>Our deliverables are designed to integrate seamlessly with your existing tools like Core365 and Go High Level, providing immediate value through AI-driven automation.</p>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-rocket"></i>1. Lead Follow-Up & Retargeting Automation</h3>
+            <p>Automate the nurturing of non-closed leads to maximize conversions and minimize manual effort.</p>
+            <ul class="list-check">
+                <li>Set up automated drip campaigns across SMS, email, and push notifications for personalized follow-ups.</li>
+                <li>Auto-classify lead outcomes (e.g., won, lost, no-show) and trigger tailored workflows.</li>
+                <li>Re-engagement sequences including messaging and scheduling links to recapture interest.</li>
+                <li>Full integration with Core365 & Go High Level for real-time lead syncing and centralized management.</li>
+            </ul>
+            <p><strong>Benefits:</strong></p>
+            <ul class="list-check">
+                <li>Increases close rates from warm leads by 30-50%.</li>
+                <li>Saves 20-30 hours/week in manual follow-up tasks.</li>
+                <li>Prevents lost revenue from forgotten or overlooked leads, especially in high-volume sectors like solar.</li>
+            </ul>
+            <div class="metric-box">Lead Recovery Rate: +35%</div>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-user-check"></i>2. Onboarding & Offboarding Automation (Field Reps)</h3>
+            <p>Streamline hiring and transitions for field representatives with AI-powered funnels, ensuring rapid scaling and compliance.</p>
+            <ul class="list-check">
+                <li>Build an onboarding funnel with automated emails, form-fills, training resource delivery, and credential provisioning.</li>
+                <li>Offboarding trigger system for role removal, device logouts, and status updates in Core365.</li>
+                <li>Re-engagement automation for "ghosted" applicants via drip campaigns and reminders.</li>
+            </ul>
+            <p><strong>Benefits:</strong></p>
+            <ul class="list-check">
+                <li>Handles high-volume hiring efficiently, reducing administrative overhead.</li>
+                <li>Cuts onboarding time by 60%, getting reps productive faster.</li>
+                <li>Improves retention by 20% through a professional, smooth first impression and ramp-up process.</li>
+            </ul>
+            <div class="metric-box">Onboarding Efficiency: 60% Faster</div>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-exchange-alt"></i>3. Cross-Service Lead Looping</h3>
+            <p>Intelligent AI-driven system to loop leads between services (e.g., roofing to solar or pest control), maximizing cross-selling opportunities and revenue from existing leads.</p>
+            <ul class="list-check">
+                <li>AI analysis of lead profiles to identify cross-service fit based on data like location, interests, and past interactions.</li>
+                <li>Automated triggers to route non-converting leads to alternative services with personalized pitches.</li>
+                <li>Seamless integration with Core365 & Go High Level for tracking looped leads and performance metrics.</li>
+                <li>Customizable looping rules and A/B testing for optimization across verticals.</li>
+            </ul>
+            <p><strong>Benefits:</strong></p>
+            <ul class="list-check">
+                <li>Unlocks additional revenue streams by converting 15-25% of "lost" leads into wins in other services.</li>
+                <li>Enhances customer lifetime value through targeted cross-selling without manual intervention.</li>
+                <li>Reduces lead acquisition costs by repurposing existing traffic across your portfolio.</li>
+            </ul>
+            <div class="metric-box">Cross-Sell Conversion: +20%</div>
+        </div>
+    </div>
+
+    <div id="timeline" class="tab-content">
+        <div class="card">
+            <h2>Project Timeline: 5 Weeks to Launch</h2>
+            <p>A phased rollout ensures minimal disruption and maximum customization. Below is a week-by-week visual breakdown.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Week 1: Discovery & Planning</h3>
+                    <ul class="list-check">
+                        <li>Initial kickoff meeting to align on requirements.</li>
+                        <li>Audit existing systems (Core365, Go High Level).</li>
+                        <li>Design custom workflows and integrations.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>Week 2: Development of Core Automations</h3>
+                    <ul class="list-check">
+                        <li>Build lead follow-up and retargeting systems.</li>
+                        <li>Implement auto-classification and drip campaigns.</li>
+                        <li>Test integrations for seamless data flow.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>Week 3: Onboarding/Offboarding Module</h3>
+                    <ul class="list-check">
+                        <li>Develop onboarding funnels and offboarding triggers.</li>
+                        <li>Set up re-engagement for applicants.</li>
+                        <li>Initial user testing and feedback loop.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>Week 4: Add-On Integration & Optimization</h3>
+                    <ul class="list-check">
+                        <li>Deploy AI Voice Agent if selected.</li>
+                        <li>Customize scripts for verticals (roofing, solar, pest control).</li>
+                        <li>Performance tuning and AI model training.</li>
+                        <li>Implement cross-service lead looping logic.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>Week 5: Launch & Training</h3>
+                    <ul class="list-check">
+                        <li>Full system rollout and go-live.</li>
+                        <li>Team training sessions and documentation.</li>
+                        <li>Post-launch monitoring and initial optimizations.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="add-ons" class="tab-content">
+        <div class="card">
+            <h2>Optional Add-On: AI Voice Agent (Outbound Calling)</h2>
+            <p>Enhance your outreach with an intelligent voice agent that scales calls without additional hires, integrated directly into your CRM.</p>
+            <ul class="list-check">
+                <li>Deploy AI voice agent to re-engage unresponsive leads automatically.</li>
+                <li>Agent logs into CRM, leaves detailed notes, and books calls with reps.</li>
+                <li>Custom scripts tailored for different verticals (roofing, solar, pest control) to ensure relevant, professional interactions.</li>
+            </ul>
+            <p><strong>Benefits:</strong></p>
+            <ul class="list-check">
+                <li>Scales outbound calling efforts by 10x without expanding your team.</li>
+                <li>Increases lead contact rates by 40-60% and reduces missed opportunities.</li>
+                <li>Standardizes messaging for a consistent, high-quality customer experience.</li>
+            </ul>
+            <div class="metric-box">Contact Rate Boost: +50%</div>
+        </div>
+    </div>
+
+    <div id="investment" class="tab-content">
+        <div class="card">
+            <h2>Investment Options</h2>
+            <p>Choose the package that best fits your needs. All options include full support and iterations based on real-time results.</p>
+            <div class="pricing-cards">
+                <div class="card pricing-card">
+                    <h3>Base Package</h3>
+                    <p>Core Deliverables: Lead Automation + Onboarding/Offboarding + Cross-Service Lead Looping</p>
+                    <div class="metric-box">4.5k CAD</div>
+                    <ul class="list-check">
+                        <li>Full integration with existing tools</li>
+                        <li>5-week implementation</li>
+                        <li>Ongoing optimization</li>
+                    </ul>
+                    <button class="cta-button">Select Base Package</button>
+                </div>
+                <div class="card pricing-card">
+                    <h3>Premium Package (with Add-On)</h3>
+                    <p>Includes Base + AI Voice Agent</p>
+                    <div class="metric-box">6.5k CAD</div>
+                    <ul class="list-check">
+                        <li>Advanced outbound scaling</li>
+                        <li>Custom AI scripts</li>
+                        <li>Enhanced ROI potential</li>
+                    </ul>
+                    <button class="cta-button">Select Premium Package</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="requirements" class="tab-content">
+        <div class="card">
+            <h2>Client Requirements</h2>
+            <p>To ensure a smooth implementation, we'll need the following from your team. These are organized for clarity.</p>
+            <div class="requirements-grid">
+                <div class="card">
+                    <h3>Access & Credentials</h3>
+                    <ul class="list-check">
+                        <li>API keys for Core365 and Go High Level.</li>
+                        <li>Admin access to CRM and communication tools.</li>
+                        <li>Sample lead data for testing (anonymized).</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Team Involvement</h3>
+                    <ul class="list-check">
+                        <li>Designated point of contact for weekly check-ins.</li>
+                        <li>Feedback on workflows during Week 2-3.</li>
+                        <li>Availability for training in Week 5.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Technical Setup</h3>
+                    <ul class="list-check">
+                        <li>Compatible systems (e.g., modern browsers, stable internet).</li>
+                        <li>Approval for AI integrations and data processing.</li>
+                        <li>Any custom scripts or branding guidelines.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Post-Launch</h3>
+                    <ul class="list-check">
+                        <li>Monitoring metrics for optimization.</li>
+                        <li>Commitment to iterate based on performance data.</li>
+                        <li>Budget for potential expansions.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
